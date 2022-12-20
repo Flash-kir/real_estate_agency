@@ -51,6 +51,7 @@ class Flat(models.Model):
     new_building = models.BooleanField(null=True, default=None)
     like = models.ManyToManyField(
         User,
+        blank=True,
         verbose_name='Кто лайкнул:'
         )
     owner_pure_phone = PhoneNumberField(
