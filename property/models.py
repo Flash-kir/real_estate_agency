@@ -16,7 +16,7 @@ class Flat(models.Model):
     town = models.CharField(
         'Город, где находится квартира',
         max_length=50,
-        db_index=True)
+        db_index=True,)
     town_district = models.CharField(
         'Район города, где находится квартира',
         max_length=50,
