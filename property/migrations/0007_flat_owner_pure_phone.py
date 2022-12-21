@@ -7,7 +7,7 @@ import phonenumber_field.modelfields
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('property', '0006_flat_like'),
+        ('property', '0006_flat_likes'),
     ]
 
     operations = [

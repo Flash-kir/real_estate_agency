@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AddField(
             model_name='flat',
-            name='like',
+            name='likes',
             field=models.ManyToManyField(to=settings.AUTH_USER_MODEL, verbose_name='Кто лайкнул:'),
         ),
     ]

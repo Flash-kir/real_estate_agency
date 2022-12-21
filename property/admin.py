@@ -27,7 +27,7 @@ class FlatAdmin(admin.ModelAdmin):
         'rooms_number',
         'active',
     )
-    raw_id_fields = ('like',)
+    raw_id_fields = ('likes',)
     inlines = [
         OwnerInstanceInline,
         ]

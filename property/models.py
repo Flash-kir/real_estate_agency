@@ -47,7 +47,7 @@ class Flat(models.Model):
         blank=True,
         db_index=True)
     new_building = models.BooleanField(null=True, default=None)
-    like = models.ManyToManyField(
+    likes = models.ManyToManyField(
         User,
         blank=True,
         related_name='liked_flats',
@@ -62,12 +62,14 @@ class Complaint(models.Model):
     user = models.ForeignKey(
         User,
         null=True,
+        related_name='complaints',
         on_delete=models.SET_NULL,
         verbose_name='Кто жаловался:'
         )
     flat = models.ForeignKey(
         Flat,
         null=True,
+        related_name='complaints',
         on_delete=models.SET_NULL,
         verbose_name='Квартира, на которую пожаловались:'
         )

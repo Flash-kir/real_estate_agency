@@ -6,7 +6,8 @@ from django.db import migrations
 
 def normalize_phone_number(apps, schema_editor):
     Flat = apps.get_model('property', 'Flat')
-    for flat in Flat.objects.all():
+    flats = Flat.objects.all()
+    for flat in flats.iterator():
         phonenumber = flat.owners_phonenumber
         for match in phonenumbers.PhoneNumberMatcher(phonenumber, "RU"):
             flat.owner_pure_phone = phonenumbers.format_number(
